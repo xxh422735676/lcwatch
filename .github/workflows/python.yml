@@ -27,6 +27,8 @@ jobs:
             python --version
 
       # Runs a set of commands using the runners shell
+      - name: checkout
+        uses : action/lcwatch@main
       - name: Run a multi-line script
         run: |
           cd test
