@@ -28,7 +28,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: checkout
-        uses : actions/lcwatch@main
+        uses : actions/checkout@v2
       - name: Run a multi-line script
         run: |
           cd test
