@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-import requests as r
+import requests 
 import json
 import time
 headers = {
