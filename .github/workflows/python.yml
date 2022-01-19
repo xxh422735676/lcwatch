@@ -23,7 +23,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: install packages
         run: | 
-            pip install bs4  requests json 
+            pip install bs4  requests
             python --version
 
       # Runs a set of commands using the runners shell
