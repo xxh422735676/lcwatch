@@ -38,7 +38,7 @@ while(True):
     now = response.json()['data']['userProfilePublicProfile']['submissionProgress']['acTotal']
     if now >  pre or cnt%100==0:
         date = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-        res = str(date)+" : "+str(now)+"\n")
+        res = str(date)+" : "+str(now)+"\n"
         res = 'curl -k --data chat_id="-1001712004777" --data "text='+ res+'" "https://api.telegram.org/bot5008363474:AAEfqXETnH3RZXudSWWuL22q2GDxjDmluNI/sendMessage"'
         os.system(res)
     pre = now
