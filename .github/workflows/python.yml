@@ -27,5 +27,7 @@ jobs:
             python --version
 
       # Runs a set of commands using the runners shell
+      - name: checkout
+        uses: ./
       - name: Run a multi-line script
-        run: python ${{ github.workspace }}/test.py
+        run: python ./test.py
