@@ -33,15 +33,12 @@ response = requests.post(url, headers=headers, data=data)
 pre = 0 
 now = 0
 cnt = 0
-while(True):
-    time.sleep(2) 
-    now = response.json()['data']['userProfilePublicProfile']['submissionProgress']['acTotal']
-    if now >  pre or cnt%100==0:
-        date = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-        res = str(date)+" : "+str(now)+"\n"
-        res = 'curl -k --data chat_id="-1001712004777" --data "text='+ res+'" "https://api.telegram.org/bot5008363474:AAEfqXETnH3RZXudSWWuL22q2GDxjDmluNI/sendMessage"'
-        os.system(res)
-    pre = now
-    cnt = cnt+1
-
+now = response.json()['data']['userProfilePublicProfile']['submissionProgress']['acTotal']
+if now >  pre or cnt%100==0:
+    date = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    res = str(date)+"  :  "+str(now)+" 题\n"
+    res = 'curl -k --data chat_id="-1001712004777" --data "text='+ res+'" "https://api.telegram.org/bot5008363474:AAEfqXETnH3RZXudSWWuL22q2GDxjDmluNI/sendMessage"'
+    os.system(res)
+pre = now
+cnt = cnt+1
 print('Bye')
